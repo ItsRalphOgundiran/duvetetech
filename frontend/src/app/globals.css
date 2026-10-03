@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #2563eb;
+  --color-brand-dark: #1e40af;
+  --color-navy: #0a1128;
+  --color-navy-light: #141d42;
+  --color-accent: #22d3ee;
+  --color-accent-dark: #0891b2;
+  --color-bg: #f5f6f8;
+  --color-ink: #131722;
+  --color-trust: #1faa59;
+  --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+/* Hide scrollbars for horizontal carousels while keeping scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Mobile bottom-nav safe area */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Subtle grid overlay for dark hero/banner sections */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 80% at 30% 20%, black 30%, transparent 75%);
+}
+
+/* Gradient headline text */
+.text-gradient {
+  background: linear-gradient(92deg, var(--color-accent), var(--color-brand) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
